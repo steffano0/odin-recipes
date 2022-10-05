@@ -1,0 +1,35 @@
+/* styles.css */
+html {
+	height: 100%;
+	background: url(./images/food.png) 50%/ cover #666;
+	background-blend-mode: multiply;
+}
+
+#title {
+    color: aliceblue;
+    background-color: rgb(255, 106, 0);
+}
+
+button {
+	--full: linear-gradient(red 0 0);
+	display: grid;
+	grid-auto-flow: column;
+	grid-gap: .5em;
+	margin: 1em auto;
+	border: solid .25em transparent;
+	padding: 1em 1.5em;
+	border-radius: 9em;
+	background: 
+		linear-gradient(to right bottom, var(--slist)) 
+			border-box;
+	font: 700 1.5em/ 1.25 ubuntu, sans-serif;
+	text-transform: uppercase;
+	
+	@supports (-webkit-mask-clip: text) {
+		-webkit-text-fill-color: transparent;
+		-webkit-mask: var(--full) text, var(--full) padding-box, var(--full);
+		-webkit-mask-composite: xor;
+	}
+	
+	
+}
